@@ -21,8 +21,10 @@ I opted to use `setTimeout` per-value, with a closure to negate an entry after `
 This app is implemented in Node.js, using `express`.
 
 ```
+git clone git@github.com:gabeklein/indigo-takehome-challenge.git
+cd indigo-takehome-challenge
 npm install
-npm run start
+npm start
 ```
 > App accepts environment variables to customize behavior.
 

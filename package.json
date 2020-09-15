@@ -4,6 +4,9 @@
   "author": "Gabe Klein",
   "description": "Doctoral dissertation on adding numbers theory",
   "main": "index.js",
+  "scripts": {
+    "start": "node ./"
+  },
   "keywords": [
     "sum",
     "adding",

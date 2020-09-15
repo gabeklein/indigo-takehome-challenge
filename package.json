@@ -1,0 +1,16 @@
+{
+  "name": "sum-app",
+  "version": "1.0.0",
+  "author": "Gabe Klein",
+  "description": "Doctoral dissertation on adding numbers theory",
+  "main": "index.js",
+  "keywords": [
+    "sum",
+    "adding",
+    "api"
+  ],
+  "license": "UNLICENSED",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

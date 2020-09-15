@@ -1,12 +1,18 @@
 <h1 align="center">Add some numbers challenge</h1>
-<h3 align="center">Amazing solution presented by 𝔊𝔞𝔟𝔢 𝔎𝔩𝔢𝔦𝔫</h3>
+<h4 align="center">Presented by Indigo</h4>
 
 <br/>
 
 ## The problem
-> Build a metric logging and reporting service that takes the sum of a metric within the last hour. You will build a minimal API web server that implements the two main methods defined below.
->
-> Note: Use volatile memory.
+> Build a metric logging and reporting service that takes the sum of a metric within the last hour.
+
+<br/>
+
+## Solution
+
+App stores a map of keys, each with a running sum. *Only* because prompt calls for an in-memory solution.
+
+I opted to use `setTimeout` per-value, with a closure to negate an entry after `TTL` has passed. I see that as more performant, in this case, than manually implementing a CRON.
 
 <br/>
 
@@ -18,13 +24,11 @@ This app is implemented in Node.js, using `express`.
 npm install
 npm run start
 ```
-> Default port is 3000.
->
-> If you would like to run api on a different port use environment variable `PORT`.
+> App accepts environment variables to customize behavior.
 
-```
-PORT=8080 npm run start
-```
+- `PORT` - Default: 3000
+- `TTL` - Number of seconds an entry will remain in its running total. Default: 1 hour
+- `DEBUG` - If set to true, app will log all actions.
 
 <br/>
 
@@ -44,12 +48,13 @@ PORT=8080 npm run start
 
 <br/>
 
-## Support
+## Troubleshooting
 
 Contact me at `gabe@termtm.com` for support in finding the user-error.
 
 <br/>
 
-## Special thanks
+## License
 
-I would like to thank my mom, for the gift of life, and the academy for absolutely nothing.
+<img src="https://images-na.ssl-images-amazon.com/images/I/718HQSM42ZL.gif"></img>
+

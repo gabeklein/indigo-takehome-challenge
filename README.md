@@ -10,9 +10,9 @@
 
 ## Solution
 
-App stores a map of keys, each with a running sum. *Only* because prompt calls for an in-memory solution.
+App stores a map of keys, each with a running sum.
 
-I opted to use `setTimeout` per-value, with a closure to negate an entry after `TTL` has passed. I see that as more performant, in this case, than manually implementing a CRON.
+Because prompt calls for an in-memory solution, I opted to use `setTimeout` per-value, with a closure to negate an entry after `TTL` has passed. I see that as more performant, in this case, than manually implementing a CRON.
 
 <br/>
 
